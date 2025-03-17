@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="app-container">
       <h1 className="header-course"> Learn With Tech Academy</h1>
-      <SearchBar SearchArea={SearchArea} setSearchTerm={setSearchArea} /> {/* البحث حسب المطلوب*/}
+      <SearchBar SearchArea={SearchArea} setSearchArea={setSearchArea} />{/* البحث حسب المطلوب*/}
       <AddCourse />
       <CourseList SearchArea={SearchArea} />  {/* تصفيه الكورسات */}
     </div>
