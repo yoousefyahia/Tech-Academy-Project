@@ -1,0 +1,40 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  padding: 10px;
+  width: 50%;
+  padding-right: 35px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-icon {
+  position: absolute;
+  right: calc(25% + 10px);
+  color: #777;
+  font-size: 16px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+/* للشاشات الصغيرة*/
+@media (max-width: 600px) {
+  .search-input {
+    width: 80%;
+  }
+
+  .search-icon {
+    right: calc(10% + 10px);
+    font-size: 14px;
+  }
+}

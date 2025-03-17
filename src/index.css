@@ -1,0 +1,51 @@
+body {
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20240610/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.jpg") ;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.app-container {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+/* animation header word*/
+@keyframes moveText {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(20%);
+    opacity: 0.2;
+  }
+
+  75% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.header-course {
+  font-size: 24px;
+  text-align: center;
+  animation: moveText 5s ease-in-out infinite;
+  color: rgb(255, 255, 255);
+  background-color: rgb(37, 35, 35);
+}
