@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteCourse } from "../store/courseSlice";
-import "../styles/CourseList.css"; 
+import "../styles/CourseList.scss"; 
 
 const CourseList = ({ SearchArea }) => {
   const courses = useSelector((state) => state.courses.courses);

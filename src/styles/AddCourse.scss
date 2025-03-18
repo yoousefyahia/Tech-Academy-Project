@@ -1,0 +1,81 @@
+$primary-color: #3498db;
+$hover-color: #2980b9;
+$input-bg: white;
+$input-focus-bg: #f0f8ff;
+$border-radius: 6px;
+
+.course-form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input {
+    padding: 12px;
+    border: 2px solid $primary-color;
+    border-radius: $border-radius;
+    font-size: 16px;
+    background: $input-bg;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      text-align: left;
+      color: #888;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $hover-color;
+      background: $input-focus-bg;
+    }
+  }
+}
+
+/* زر الإضافة */
+button {
+  background: $primary-color;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background: $hover-color;
+    transform: scale(1.02);
+  }
+}
+
+/* تحسين للشاشات الصغيرة */
+@media (max-width: 600px) {
+  .course-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .holder {
+    gap: 8px;
+  }
+
+  .holder input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

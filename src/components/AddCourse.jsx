@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCourse } from "../store/courseSlice";
-import "../styles/AddCourse.css"
+import "../styles/AddCourse.scss"
 const AddCourse = () => {
   const dispatch = useDispatch();
   const [course, setCourse] = useState({ title: "", description: "", instructor: "", duration: "" });   // intial state for all
