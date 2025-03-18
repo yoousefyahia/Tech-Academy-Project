@@ -7,9 +7,18 @@ $border-radius: 10px;
 
 .course-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* صفين في كل صف كورسين */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 15px;
+
+  p.no-courses {
+    color: white; 
+    text-align: center; 
+    font-weight: bold; 
+    background-color: $button-bg;
+    padding:5px;
+    border-radius: $border-radius;
+  }
 }
 
 .course-item {

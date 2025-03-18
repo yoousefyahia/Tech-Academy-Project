@@ -3,18 +3,35 @@ import { useSelector, useDispatch } from "react-redux";
 import { deleteCourse } from "../store/courseSlice";
 import "../styles/CourseList.scss"; 
 
-const CourseList = ({ SearchArea }) => {
-  const courses = useSelector((state) => state.courses.courses);
-   const dispatch = useDispatch(); //to use actions
+interface Course {
+  id: number;
+  title: string;
+  description: string;
+  instructor: string;
+  duration: string;
+}
+
+interface Arr {
+  courses: {
+    courses: Course[];
+  };
+}
+
+interface type {
+  SearchArea: string;
+}
+
+const CourseList = ({ SearchArea }: type) => {
+  const courses = useSelector((state: Arr) => state.courses.courses);
+  const dispatch = useDispatch();
 
   const filteredCourses = courses.filter(course =>
-    course.title.toLowerCase().includes(SearchArea.toLowerCase())//تحويل الكل لحروف صغيره
+    course.title.toLowerCase().includes(SearchArea.toLowerCase())
   );
 
   return (
     <div className="course-list">
-      {filteredCourses.length > 0 ? 
-      (
+      {filteredCourses.length > 0 ? (
         filteredCourses.map((course) => (
           <div key={course.id} className="course-item">
             <h3>{course.title}</h3>
@@ -24,11 +41,9 @@ const CourseList = ({ SearchArea }) => {
             <button onClick={() => dispatch(deleteCourse(course.id))}>Delete</button>
           </div>
         ))
-      ) 
-      : 
-      (
-        <p>No courses available.</p> // ف حاله مفيش تطابق
-      )}
+      ) : (
+        <p className="no-courses">No courses available.</p>
+              )}
     </div>
   );
 };
